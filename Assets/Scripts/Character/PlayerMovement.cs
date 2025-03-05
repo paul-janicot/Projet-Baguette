@@ -9,7 +9,6 @@ public class PlayerMovement : MonoBehaviour
     public static PlayerMovement instance;
 
     private Rigidbody _rb;
-    private Gravity _gravity;
     private Animator _anim;
     #endregion
 
@@ -18,7 +17,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] float movementSpeed;
     [SerializeField] float accel;
     [SerializeField] float deccel;
-    [SerializeField] float frictionPercentage;
+    [SerializeField] float rotationSpeed;
 
     [Header("Dash")]
     [SerializeField] float dashingTime;
@@ -27,8 +26,8 @@ public class PlayerMovement : MonoBehaviour
 
     [Header("Assigns")]
     [SerializeField] Transform orientation;
+    [SerializeField] Transform direction;
     [SerializeField] Transform playerObj;
-    [SerializeField] CinemachineFreeLook playerCamera;
     #endregion
 
     private float lastDashTimer;
@@ -44,8 +43,20 @@ public class PlayerMovement : MonoBehaviour
         instance = this;
 
         _rb = GetComponent<Rigidbody>();
-        _gravity = GetComponent<Gravity>();
         _anim = GetComponent<Animator>();
+    }
+
+    private void Update()
+    {
+        Vector3 inputDir = ToVector3(moveDir);
+        Vector3 orientedInputDir = orientation.forward * inputDir.z + orientation.right * inputDir.x;
+
+        if (inputDir != Vector3.zero)
+        {
+            playerObj.forward = Vector3.Slerp(playerObj.forward, orientedInputDir.normalized, rotationSpeed * Time.deltaTime);
+
+            direction.forward = orientedInputDir.normalized;
+        }
     }
 
     private void FixedUpdate()
@@ -57,20 +68,10 @@ public class PlayerMovement : MonoBehaviour
         {
             isDashing = false;
         }
-        #endregion
 
-        #region Physics
-        if (!isDashing)
+        if (lastDashTimer <= -dashRecoverCooldown)
         {
-            if (moveDir == Vector2.zero && ToVector2(_rb.velocity) != Vector2.zero)
-            {
-                if (ToVector2(_rb.velocity).sqrMagnitude <= 1)
-                {
-                    _rb.velocity = new Vector3(0, _rb.velocity.y, 0); ;
-                }
-                Vector2 brakeVector = -ToVector2(_rb.velocity);
-                _rb.AddForce(brakeVector * frictionPercentage, ForceMode.Force);
-            }
+            canDash = true;
         }
         #endregion
 
@@ -89,22 +90,29 @@ public class PlayerMovement : MonoBehaviour
     }
 
 
-    private void OnDash(InputAction.CallbackContext context)
+    public void OnDash(InputAction.CallbackContext context)
     {
-        if (canDash && !isDashing)
+        if (context.performed)
         {
-            canDash = false;
-            isDashing = true;
-            lastDashTimer = dashingTime;
-            _gravity.gravityScale = 0;
-            _rb.velocity = Vector3.zero;
-            _rb.AddForce(playerObj.forward * dashingPower, ForceMode.Impulse);
+            if (canDash && !isDashing)
+            {
+                canDash = false;
+                isDashing = true;
+                lastDashTimer = dashingTime;
+                _rb.velocity = Vector3.zero;
+                _rb.AddForce(direction.forward * dashingPower, ForceMode.Impulse);
+            }
         }
     }
 
-    private void OnMove(InputAction.CallbackContext context)
+    public void OnMove(InputAction.CallbackContext context)
     {
-        moveDir = context.ReadValue<Vector2>();
+        moveDir = context.ReadValue<Vector2>().normalized;
+
+        if (moveDir.sqrMagnitude <= 0.1f)
+        {
+            moveDir = Vector2.zero;
+        }
     }
 
     #region Maths
