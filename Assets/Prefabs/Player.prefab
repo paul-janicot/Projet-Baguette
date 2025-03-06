@@ -454,6 +454,7 @@ GameObject:
   - component: {fileID: 4523765095147509966}
   - component: {fileID: 6467376254407571104}
   - component: {fileID: 1415577716576488636}
+  - component: {fileID: 6822667216137288137}
   - component: {fileID: 4070989494148073913}
   - component: {fileID: 87781582675821972}
   m_Layer: 3
@@ -532,6 +533,26 @@ Rigidbody:
   m_Interpolate: 1
   m_Constraints: 112
   m_CollisionDetection: 1
+--- !u!114 &6822667216137288137
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8322551678630660850}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7f36ac85f95d2b45a2e6546c0001773, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  normalAttack1Prefab: {fileID: 6017130129774483332, guid: b1e8c466d51027e4298f7a9e83ff128e, type: 3}
+  normalAttack2Prefab: {fileID: 6017130129774483332, guid: 75731069422df794db913d630976e5c6, type: 3}
+  normalAttack3Prefab: {fileID: 6017130129774483332, guid: d577ce600dd55e7469370ab867b39787, type: 3}
+  attack1Cooldown: 0.2
+  attack2Cooldown: 0.2
+  attack3Cooldown: 0.6
+  comboCooldown: 1
+  Direction: {fileID: 5135167971435446704}
 --- !u!114 &4070989494148073913
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -613,6 +634,22 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: b3fc0ea5-65af-4084-be6e-5d2314f447d7
     m_ActionName: Gameplay/Dash[/XInputControllerWindows/buttonSouth,/Keyboard/space]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6822667216137288137}
+        m_TargetAssemblyTypeName: PlayerAttack, Assembly-CSharp
+        m_MethodName: NormalAttack
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: a25fb83a-fdf7-4717-9fe1-75e9ac7772a9
+    m_ActionName: Gameplay/Attack[/XInputControllerWindows/buttonWest,/Keyboard/k]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Gameplay
