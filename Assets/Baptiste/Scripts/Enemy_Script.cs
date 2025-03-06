@@ -80,7 +80,7 @@ public class Enemy_Script : MonoBehaviour
                 if (Vector3.Angle(_transform.forward, directionToPlayer) < fieldOfView / 2) //Is the player in the Field of view
                 {
                     float distanceToPlayer = Vector3.Distance(_transform.position, player.position);
-                    if (!Physics.Raycast(_transform.position, directionToPlayer, distanceToPlayer, obstacleMask))
+                    if (!Physics.Raycast(_transform.position, directionToPlayer, distanceToPlayer, obstacleMask)) //Is there a wall between the player and the enemy
                     {
                         playerSeen = true;
                     }
