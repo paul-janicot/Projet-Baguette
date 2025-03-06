@@ -11,7 +11,7 @@ public class Projectile_Script : MonoBehaviour
     {
         Invoke("Death", 3);
         body = GetComponent<Rigidbody>();
-        body.AddForce(Vector3.forward * speed, ForceMode.Impulse);
+        body.AddForce(transform.forward * speed, ForceMode.Impulse);
     }
 
     // Update is called once per frame

@@ -4,18 +4,20 @@ using UnityEngine.AI;
 
 public class Enemy_Script : MonoBehaviour
 {
-    private NavMeshAgent agent;
+    
 
-    [SerializeField] private float travelRange; //Distance the actor will travel in a straight line (random roam only)
+    [SerializeField] private float patrolRange; //Distance the actor will travel in a straight line (random roam only)
     [SerializeField] private float sightRange; //Distance at which the actor will detect the player
     [SerializeField] private float fieldOfView; //the angle at which the enemy sees
     [SerializeField] private float shootingRange;
     [SerializeField] private float shootingSpeed;
 
+    private NavMeshAgent agent;
     private Transform _transform;
     private Transform _spawn;
     private bool playerSeen;
-    private bool canShoot = true;
+    private float eyeCheck;
+    private float shootCheck;
 
     public LayerMask playerMask;
     public LayerMask obstacleMask;
@@ -29,7 +31,7 @@ public class Enemy_Script : MonoBehaviour
     {
         agent = GetComponent<NavMeshAgent>();
         _transform = GetComponent<Transform>();
-        _player = GameObject.FindGameObjectWithTag("Player");
+        _player = PlayerMovement.instance.gameObject;
         _spawn = transform.GetChild(0);
 
     }
@@ -37,36 +39,39 @@ public class Enemy_Script : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //Invoke("FieldOfView", 0.2f);
+        eyeCheck -= Time.deltaTime;
+        shootCheck -= Time.deltaTime;
+        
+        if (eyeCheck <= 0) { FieldOfView();  eyeCheck = 0.2f; Debug.Log(agent.isStopped); }
+        if (!playerSeen && agent.remainingDistance <= agent.stoppingDistance) //done with path
+        {
+            Vector3 point;
+            if (RandomRoam(_transform.position, patrolRange, out point)) //pass in our centre point and radius of area
+            {
+                agent.SetDestination(point);
+            }
+        }
+        else if (playerSeen)
+        {
+            agent.SetDestination(_player.transform.position);
 
-        //if (!playerSeen && agent.remainingDistance <= agent.stoppingDistance) //done with path
-        //{
-        //    Vector3 point;
-        //    if (RandomRoam(_transform.position, travelRange, out point)) //pass in our centre point and radius of area
-        //    {
-        //        agent.SetDestination(point);
-        //    }
-        //}
-        //else if (playerSeen)
-        //{
-        //    agent.SetDestination(_player.transform.position);
 
-        //        if (agent.remainingDistance <= shootingRange) 
-        //        {
-        //        agent.isStopped = true;
-        //        Invoke("Shoot", 0.2f);
-        //        }
-        //}
-        //Debug.Log(playerSeen);
-        if (canShoot) { Invoke("Shoot", shootingSpeed); canShoot = false;  }
-
+            if (agent.remainingDistance <= shootingRange)
+            {
+                if (shootCheck <= 0) { Shoot(); agent.isStopped = true; shootCheck = shootingSpeed; }
+                
+            }
+            else { agent.isStopped = false; }
+        }
+        else { agent.isStopped = false; }
     }
 
        private void Shoot() 
        {
+        Debug.Log("Shooting");
+        _transform.LookAt(_player.transform);
         Instantiate(projectile, _spawn.position, _spawn.rotation);
-        canShoot = true;
-       }
+        }
 
         bool RandomRoam(Vector3 center, float range, out Vector3 result)
         {
@@ -88,7 +93,6 @@ public class Enemy_Script : MonoBehaviour
 
         private void FieldOfView()
         {
-        Debug.Log(playerSeen);
         Collider[] seeing = Physics.OverlapSphere(_transform.position, sightRange, playerMask);
 
             if (seeing.Length != 0) //Is the player in the seeing range
