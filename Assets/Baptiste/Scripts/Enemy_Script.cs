@@ -9,15 +9,20 @@ public class Enemy_Script : MonoBehaviour
     [SerializeField] private float travelRange; //Distance the actor will travel in a straight line (random roam only)
     [SerializeField] private float sightRange; //Distance at which the actor will detect the player
     [SerializeField] private float fieldOfView; //the angle at which the enemy sees
-    private Transform _transform;
+    [SerializeField] private float shootingRange;
+    [SerializeField] private float shootingSpeed;
 
+    private Transform _transform;
+    private Transform _spawn;
+    private bool playerSeen;
+    private bool canShoot = true;
 
     public LayerMask playerMask;
     public LayerMask obstacleMask;
-
+    public GameObject projectile;
     public GameObject _player; //Placeholder until singleton
 
-    private bool playerSeen;
+    
 
     // Start is called before the first frame update
     void Start()
@@ -25,29 +30,43 @@ public class Enemy_Script : MonoBehaviour
         agent = GetComponent<NavMeshAgent>();
         _transform = GetComponent<Transform>();
         _player = GameObject.FindGameObjectWithTag("Player");
+        _spawn = transform.GetChild(0);
 
     }
 
     // Update is called once per frame
     void Update()
     {
-        Invoke("FieldOfView", 0.2f);
+        //Invoke("FieldOfView", 0.2f);
 
-        if (!playerSeen && agent.remainingDistance <= agent.stoppingDistance) //done with path
-        {
-            Vector3 point;
-            if (RandomRoam(_transform.position, travelRange, out point)) //pass in our centre point and radius of area
-            {
-                agent.SetDestination(point);
-            }
-        }
-        else if (playerSeen)
-        {
-            agent.SetDestination(_player.transform.position);
-        }
-        Debug.Log(playerSeen);
+        //if (!playerSeen && agent.remainingDistance <= agent.stoppingDistance) //done with path
+        //{
+        //    Vector3 point;
+        //    if (RandomRoam(_transform.position, travelRange, out point)) //pass in our centre point and radius of area
+        //    {
+        //        agent.SetDestination(point);
+        //    }
+        //}
+        //else if (playerSeen)
+        //{
+        //    agent.SetDestination(_player.transform.position);
+
+        //        if (agent.remainingDistance <= shootingRange) 
+        //        {
+        //        agent.isStopped = true;
+        //        Invoke("Shoot", 0.2f);
+        //        }
+        //}
+        //Debug.Log(playerSeen);
+        if (canShoot) { Invoke("Shoot", shootingSpeed); canShoot = false;  }
 
     }
+
+       private void Shoot() 
+       {
+        Instantiate(projectile, _spawn.position, _spawn.rotation);
+        canShoot = true;
+       }
 
         bool RandomRoam(Vector3 center, float range, out Vector3 result)
         {
