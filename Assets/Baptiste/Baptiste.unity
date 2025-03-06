@@ -527,7 +527,7 @@ NavMeshAgent:
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
-  m_StoppingDistance: 0
+  m_StoppingDistance: 2
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
@@ -547,11 +547,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4d4120dfe2b3024f857350b0f533764, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  travelRange: 10
-  sightRange: 20
+  patrolRange: 10
+  sightRange: 10
   fieldOfView: 90
   shootingRange: 7.5
-  shootingSpeed: 1
+  shootingSpeed: 0.5
   playerMask:
     serializedVersion: 2
     m_Bits: 8
@@ -559,7 +559,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   projectile: {fileID: 2083056555130460907, guid: b150b8952e6b4164e949cefe95efe50f, type: 3}
-  _player: {fileID: 0}
 --- !u!1 &1359347626
 GameObject:
   m_ObjectHideFlags: 0
