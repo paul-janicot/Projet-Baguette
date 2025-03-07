@@ -95,9 +95,10 @@ GameObject:
   - component: {fileID: 5349875696874959084}
   - component: {fileID: 7720502409479506644}
   - component: {fileID: 3256260289327358228}
+  - component: {fileID: -6906585933877864275}
   m_Layer: 0
   m_Name: Croissant
-  m_TagString: Untagged
+  m_TagString: PlayerAttacks
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -179,3 +180,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3
+--- !u!114 &-6906585933877864275
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7201803798204917947}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26353ea9bd160c047adee4c89a83c222, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyKnockback: 2
+  enemyStunTime: 1
