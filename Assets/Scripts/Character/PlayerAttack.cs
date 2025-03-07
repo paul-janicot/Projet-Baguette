@@ -3,59 +3,112 @@ using UnityEngine.InputSystem;
 
 public class PlayerAttack : MonoBehaviour
 {
+    public static PlayerAttack instance;
+
+    [Header("Normal Attack")]
     [SerializeField] private GameObject normalAttack1Prefab;
     [SerializeField] private GameObject normalAttack2Prefab;
     [SerializeField] private GameObject normalAttack3Prefab;
 
-    [SerializeField] private float attack1Cooldown;
-    [SerializeField] private float attack2Cooldown;
-    [SerializeField] private float attack3Cooldown;
+    [SerializeField] private float normalAttack1Cooldown;
+    [SerializeField] private float normalAttack2Cooldown;
+    [SerializeField] private float normalAttack3Cooldown;
 
     [SerializeField] private float comboCooldown;
+    [SerializeField] private float normalAttackDontMoveTime;
 
-    [SerializeField] private Transform Direction;
+    [Header("Range Attack")]
+    [SerializeField] private GameObject croissantPrefab;
+    [SerializeField] private float croissantLifespan;
 
-    private bool isAttacking;
+    [SerializeField] private float rangeAttackCooldown;
 
-    private float lastAttackTimer;
-    private int currentAttack;
+    [SerializeField] private float rangeAttackDontMoveTime;
 
-    private bool attackPressedEarly;
-    private bool fakePerformed;
+    [Header("Assign")]
+    [SerializeField] private Transform direction;
+    [SerializeField] private Transform rangeSpawn;
+
+    private bool isNormalAttacking;
+    private float lastNormalAttackTimer;
+    private int currentNormalAttack;
+    
+
+    private bool isRangeAttacking;
+    private float lastRangeAttackTimer;
+
+    private PlayerMovement movement;
+
+    private void Awake()
+    {
+        instance = this;
+        movement = PlayerMovement.instance;
+    }
 
     private void FixedUpdate()
     {
-        lastAttackTimer -= Time.fixedDeltaTime;
+        lastNormalAttackTimer -= Time.fixedDeltaTime;  //timers for cooldowns
+        lastRangeAttackTimer -= Time.fixedDeltaTime;
 
-        if (lastAttackTimer <= 0)
+        if (lastNormalAttackTimer <= 0)
         {
-            isAttacking = false;
+            isNormalAttacking = false;
+        }
+
+        if (lastRangeAttackTimer <= 0)
+        {
+            isRangeAttacking = false;
         }
     }
 
+    public void RangeAttack(InputAction.CallbackContext context)
+    {
+        if (context.performed)
+        {
+            if (lastRangeAttackTimer <= 0 && !movement.isDashing)
+            {
+                isRangeAttacking = true;
+                lastRangeAttackTimer = rangeAttackCooldown;
+
+                movement.DisableForTime(rangeAttackDontMoveTime);
+
+                GameObject currentAttack = Instantiate(croissantPrefab, rangeSpawn.transform.position, Quaternion.identity);
+                currentAttack.transform.forward = direction.forward;
+                Destroy(currentAttack, croissantLifespan);
+            }
+        }
+    }
+
+
     public void NormalAttack(InputAction.CallbackContext context)
     {
-        if (context.performed || fakePerformed)
+        if (context.performed)
         {
-            if (!isAttacking && lastAttackTimer <=0)
+
+            if (lastNormalAttackTimer <=0 && !movement.isDashing)
             {
-                if (lastAttackTimer < -comboCooldown)
+                isNormalAttacking = true;
+
+                movement.DisableForTime(normalAttackDontMoveTime);
+
+                //change the attack index for combo
+                if (lastNormalAttackTimer < -comboCooldown)  
                 {
-                    currentAttack = 1;
+                    currentNormalAttack = 1;
                 }
                 else
                 {
-                    if (currentAttack != 3)
+                    if (currentNormalAttack != 3)
                     {
-                        currentAttack++;
+                        currentNormalAttack++;
                     }
                     else
                     {
-                        currentAttack = 1;
+                        currentNormalAttack = 1;
                     }
                 }
 
-                SpawnNormalAttack(currentAttack);
+                SpawnNormalAttack(currentNormalAttack); // spawn attack depending on index
             }
         }
     }
@@ -68,17 +121,17 @@ public class PlayerAttack : MonoBehaviour
         {
             case 1:
                 currentAttack = Instantiate(normalAttack1Prefab, transform.position, Quaternion.identity);
-                lastAttackTimer = attack1Cooldown;
+                lastNormalAttackTimer = normalAttack1Cooldown;
                 break;
 
             case 2:
                 currentAttack = Instantiate(normalAttack2Prefab, transform.position, Quaternion.identity);
-                lastAttackTimer = attack2Cooldown;
+                lastNormalAttackTimer = normalAttack2Cooldown;
                 break;
 
             case 3:
                 currentAttack = Instantiate(normalAttack3Prefab, transform.position, Quaternion.identity);
-                lastAttackTimer = attack3Cooldown;
+                lastNormalAttackTimer = normalAttack3Cooldown;
                 break;
 
             default:
@@ -86,7 +139,7 @@ public class PlayerAttack : MonoBehaviour
                 break;
         }
 
-        currentAttack.transform.forward = Direction.forward;
-        Destroy(currentAttack, lastAttackTimer);
+        currentAttack.transform.forward = direction.forward;
+        Destroy(currentAttack, lastNormalAttackTimer);
     }
 }
