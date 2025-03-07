@@ -130,6 +130,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1811285498233432998, guid: 80ed6e17e070fc94d8428e3e48df2e00, type: 3}
+      propertyPath: near clip plane
+      value: 0.01
+      objectReference: {fileID: 0}
     - target: {fileID: 4523765095147509966, guid: 80ed6e17e070fc94d8428e3e48df2e00, type: 3}
       propertyPath: m_LocalPosition.x
       value: 141.91852
@@ -176,15 +180,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8734825413235258809, guid: 80ed6e17e070fc94d8428e3e48df2e00, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1
+      value: -17.04
       objectReference: {fileID: 0}
     - target: {fileID: 8734825413235258809, guid: 80ed6e17e070fc94d8428e3e48df2e00, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.8
+      value: 29.68
       objectReference: {fileID: 0}
     - target: {fileID: 8734825413235258809, guid: 80ed6e17e070fc94d8428e3e48df2e00, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1
+      value: -17.04
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
