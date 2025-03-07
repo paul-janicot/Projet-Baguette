@@ -1,4 +1,3 @@
-using Cinemachine;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -9,7 +8,6 @@ public class PlayerMovement : MonoBehaviour
     public static PlayerMovement instance;
 
     private Rigidbody _rb;
-    private Animator _anim;
     #endregion
 
     #region SerializeField Values
@@ -43,7 +41,6 @@ public class PlayerMovement : MonoBehaviour
         instance = this;
 
         _rb = GetComponent<Rigidbody>();
-        _anim = GetComponent<Animator>();
     }
 
     private void Update()
@@ -133,7 +130,7 @@ public class PlayerMovement : MonoBehaviour
     #endregion
 
     #region Utils
-    public void Vibrate(float lowF, float highF, float t0ime)
+    public void Vibrate(float lowF, float highF, float time)
     {
         if (Gamepad.current != null)
         {
