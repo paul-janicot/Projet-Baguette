@@ -85,13 +85,24 @@ public class DayMenu_Script : MonoBehaviour
     }
 
     // Fonctions Boutons
-    void Baguette() 
+    public void Baguette() 
     { 
        
     }
-    void Brioche() { }
-    void Muffin () { }
-    void Gateau () { }
-
-    void Croissant() { }
+    public void Brioche() 
+    { 
+    
+    }
+    public void Muffin () 
+    {
+    
+    }
+    public void Gateau () 
+    { 
+    
+    }
+    public void Croissant() 
+    { 
+    
+    }
 }

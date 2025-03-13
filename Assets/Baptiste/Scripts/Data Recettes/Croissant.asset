@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf32ec02f9c7a6b42a80d9f57370273d, type: 3}
+  m_Name: Croissant
+  m_EditorClassIdentifier: 
+  graphic: {fileID: 4064064315501324714, guid: 6017ca1c3a7b62c48bbad9ec61fba749, type: 3}
+  recetteName: Croissant
+  points: 0
