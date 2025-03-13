@@ -29,11 +29,10 @@ public class PlayerMovement : MonoBehaviour
     #endregion
 
     private float lastDashTimer;
+    public bool isDashing;
+    private bool canDash;
 
-    private bool isDashing;
-
-    [DoNotSerialize] public bool canDash;
-
+    private float noMoveTimer;
     public Vector2 moveDir;
 
     private void Awake()
@@ -61,6 +60,8 @@ public class PlayerMovement : MonoBehaviour
         #region Timers
         lastDashTimer -= Time.fixedDeltaTime;
 
+        noMoveTimer -= Time.fixedDeltaTime;
+
         if (lastDashTimer <= 0 && isDashing)
         {
             isDashing = false;
@@ -73,7 +74,11 @@ public class PlayerMovement : MonoBehaviour
         #endregion
 
         #region Movements
-        if (!isDashing)
+        if(noMoveTimer > 0)
+        {
+            _rb.velocity = Vector3.zero;
+        }
+        else if (!isDashing)
         {
             Vector2 targetMovement = OrientVector2(moveDir, orientation) * movementSpeed;
             Vector2 movementDiff = targetMovement - ToVector2(_rb.velocity);
@@ -86,12 +91,12 @@ public class PlayerMovement : MonoBehaviour
         #endregion
     }
 
-
+    #region InputActions
     public void OnDash(InputAction.CallbackContext context)
     {
         if (context.performed)
         {
-            if (canDash && !isDashing)
+            if (canDash && !isDashing && noMoveTimer <= 0)
             {
                 canDash = false;
                 isDashing = true;
@@ -104,13 +109,25 @@ public class PlayerMovement : MonoBehaviour
 
     public void OnMove(InputAction.CallbackContext context)
     {
-        moveDir = context.ReadValue<Vector2>().normalized;
-
-        if (moveDir.sqrMagnitude <= 0.1f)
+        if (noMoveTimer <= 0)
         {
-            moveDir = Vector2.zero;
+            moveDir = context.ReadValue<Vector2>();
+
+            if (moveDir.sqrMagnitude <= 0.1f)
+            {
+                moveDir = Vector2.zero;
+            }
         }
     }
+    #endregion
+
+    #region Methods
+    public void DisableForTime(float time)
+    {
+        noMoveTimer = Mathf.Max(time, noMoveTimer);
+        //moveDir = Vector2.zero;
+    }
+    #endregion
 
     #region Maths
     public Vector3 ToVector3(Vector2 vector)
@@ -126,16 +143,6 @@ public class PlayerMovement : MonoBehaviour
     public Vector2 OrientVector2(Vector2 vector, Transform orientation)
     {
         return ToVector2(orientation.forward * vector.y + orientation.right * vector.x);
-    }
-    #endregion
-
-    #region Utils
-    public void Vibrate(float lowF, float highF, float time)
-    {
-        if (Gamepad.current != null)
-        {
-            Gamepad.current.SetMotorSpeeds(lowF, highF);
-        }
     }
     #endregion
 }
