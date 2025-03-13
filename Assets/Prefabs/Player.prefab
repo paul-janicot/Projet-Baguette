@@ -46,7 +46,7 @@ GameObject:
   m_Layer: 0
   m_Name: Direction
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -62,7 +62,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 6188573620998376239}
   m_Father: {fileID: 4523765095147509966}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1986977264906263463
@@ -443,6 +444,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4523765095147509966}
   m_LocalEulerAnglesHint: {x: 0, y: 45, z: 0}
+--- !u!1 &7559464710781711052
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6188573620998376239}
+  m_Layer: 0
+  m_Name: RangeSpawn
+  m_TagString: Untagged
+  m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6188573620998376239
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7559464710781711052}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 2}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5135167971435446704}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8322551678630660850
 GameObject:
   m_ObjectHideFlags: 0
@@ -548,11 +580,17 @@ MonoBehaviour:
   normalAttack1Prefab: {fileID: 6017130129774483332, guid: b1e8c466d51027e4298f7a9e83ff128e, type: 3}
   normalAttack2Prefab: {fileID: 6017130129774483332, guid: 75731069422df794db913d630976e5c6, type: 3}
   normalAttack3Prefab: {fileID: 6017130129774483332, guid: d577ce600dd55e7469370ab867b39787, type: 3}
-  attack1Cooldown: 0.2
-  attack2Cooldown: 0.2
-  attack3Cooldown: 0.6
+  normalAttack1Cooldown: 0.3
+  normalAttack2Cooldown: 0.3
+  normalAttack3Cooldown: 0.5
   comboCooldown: 1
-  Direction: {fileID: 5135167971435446704}
+  normalAttackDontMoveTime: 0.1
+  croissantPrefab: {fileID: 7201803798204917947, guid: f4e489681aa36af47bb4ff04def48a10, type: 3}
+  croissantLifespan: 2
+  rangeAttackCooldown: 0.2
+  rangeAttackDontMoveTime: 0.1
+  direction: {fileID: 5135167971435446704}
+  rangeSpawn: {fileID: 6188573620998376239}
 --- !u!114 &4070989494148073913
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -568,14 +606,14 @@ MonoBehaviour:
   movementSpeed: 10
   accel: 8
   deccel: 8
-  rotationSpeed: 10
+  rotationSpeed: 20
   dashingTime: 0.2
   dashingPower: 30
   dashRecoverCooldown: 1
   orientation: {fileID: 4106321211806302668}
   direction: {fileID: 5135167971435446704}
   playerObj: {fileID: 689120861229603994}
-  canDash: 0
+  isDashing: 0
   moveDir: {x: 0, y: 0}
 --- !u!114 &87781582675821972
 MonoBehaviour:
@@ -650,6 +688,22 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: a25fb83a-fdf7-4717-9fe1-75e9ac7772a9
     m_ActionName: Gameplay/Attack[/XInputControllerWindows/buttonWest,/Keyboard/k]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6822667216137288137}
+        m_TargetAssemblyTypeName: PlayerAttack, Assembly-CSharp
+        m_MethodName: RangeAttack
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 3116f8ef-bd5e-4f87-a22b-1b65de284f19
+    m_ActionName: Gameplay/RangeAttack[/Keyboard/j,/XInputControllerWindows/rightTrigger]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Gameplay
