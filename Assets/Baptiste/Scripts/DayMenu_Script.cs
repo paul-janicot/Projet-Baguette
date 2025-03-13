@@ -26,14 +26,37 @@ public class DayMenu_Script : MonoBehaviour
     //Croissant 
     public int croissants;
     [SerializeField] TextMeshProUGUI textCroissants;
-
+   
 
 
 
 
     void Start()
     {
-        
+        if (InventoryManager.instance.GetInventory().ContainsKey("farine"))
+        {
+            farine = InventoryManager.instance.GetInventory()["farine"];
+        }
+        if (InventoryManager.instance.GetInventory().ContainsKey("beurre"))
+        {
+            beurre = InventoryManager.instance.GetInventory()["beurre"];
+        }
+        if (InventoryManager.instance.GetInventory().ContainsKey("oeuf"))
+        {
+            oeuf = InventoryManager.instance.GetInventory()["oeuf"];
+        }
+        if (InventoryManager.instance.GetInventory().ContainsKey("sucre"))
+        {
+            sucre = InventoryManager.instance.GetInventory()["sucre"];
+        }
+        if (InventoryManager.instance.GetInventory().ContainsKey("lait"))
+        {
+            lait = InventoryManager.instance.GetInventory()["lait"];
+        }
+        if (InventoryManager.instance.GetInventory().ContainsKey("fruit"))
+        {
+            fruit = InventoryManager.instance.GetInventory()["fruit"];
+        }
     }
 
     // Update is called once per frame
@@ -45,7 +68,7 @@ public class DayMenu_Script : MonoBehaviour
         textSucre.text = "" + sucre;
         textLait.text = "" + lait;
         textFruit.text = "" + fruit;
-        textCroissants.text = "" + croissants;
+        textCroissants.text = "Nombre de croissant :" + croissants;
         textScore.text = "" + score;
 
     }

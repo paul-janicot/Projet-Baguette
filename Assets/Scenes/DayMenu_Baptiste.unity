@@ -211,7 +211,7 @@ GameObject:
   - component: {fileID: 22776553}
   - component: {fileID: 22776552}
   m_Layer: 5
-  m_Name: Vignette Ingredients (5)
+  m_Name: Vignette Fruit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -630,7 +630,7 @@ GameObject:
   - component: {fileID: 77829465}
   - component: {fileID: 77829464}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: SucreText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2829,7 +2829,7 @@ GameObject:
   - component: {fileID: 633619742}
   - component: {fileID: 633619741}
   m_Layer: 5
-  m_Name: Vignette Ingredients (2)
+  m_Name: Vignette Oeuf
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3302,7 +3302,7 @@ GameObject:
   - component: {fileID: 739812220}
   - component: {fileID: 739812219}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: FruitText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3573,7 +3573,7 @@ GameObject:
   - component: {fileID: 833997366}
   - component: {fileID: 833997365}
   m_Layer: 5
-  m_Name: Vignette Ingredients (4)
+  m_Name: Vignette Lait
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3677,7 +3677,7 @@ GameObject:
   - component: {fileID: 857152758}
   - component: {fileID: 857152757}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: LaitText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4013,7 +4013,7 @@ GameObject:
   - component: {fileID: 946590380}
   - component: {fileID: 946590379}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: OeufText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4384,7 +4384,7 @@ GameObject:
   - component: {fileID: 1003590570}
   - component: {fileID: 1003590569}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: FarineText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4624,7 +4624,7 @@ GameObject:
   - component: {fileID: 1050336004}
   - component: {fileID: 1050336003}
   m_Layer: 5
-  m_Name: Vignette Ingredients
+  m_Name: Vignette Farine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5697,7 +5697,7 @@ GameObject:
   - component: {fileID: 1346883717}
   - component: {fileID: 1346883716}
   m_Layer: 5
-  m_Name: Vignette Ingredients (1)
+  m_Name: Vignette Beurre
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5806,7 +5806,7 @@ GameObject:
   - component: {fileID: 1388606994}
   - component: {fileID: 1388606993}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: BeurreText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6017,7 +6017,7 @@ GameObject:
   - component: {fileID: 1394428344}
   - component: {fileID: 1394428343}
   m_Layer: 5
-  m_Name: Vignette Ingredients (3)
+  m_Name: Vignette Sucre
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7013,6 +7013,83 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1733046938}
   m_CullTransparentMesh: 1
+--- !u!1 &1743222899
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1743222900}
+  - component: {fileID: 1743222901}
+  - component: {fileID: 1743222902}
+  m_Layer: 5
+  m_Name: Script Object
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1743222900
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1743222899}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2057622310}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1743222901
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1743222899}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76535a060a4668d4e8cc9c5ba00c1f2f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  score: 0
+  textScore: {fileID: 428934207}
+  farine: 0
+  textFarine: {fileID: 1003590569}
+  beurre: 0
+  textBeurre: {fileID: 1388606993}
+  oeuf: 0
+  textOeuf: {fileID: 946590379}
+  sucre: 0
+  textSucre: {fileID: 77829464}
+  lait: 0
+  textLait: {fileID: 857152757}
+  fruit: 0
+  textFruit: {fileID: 739812219}
+  croissants: 0
+  textCroissants: {fileID: 93327221}
+--- !u!114 &1743222902
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1743222899}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ffcfc0c7250b2ef409b9d2f584af94a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1756495842
 GameObject:
   m_ObjectHideFlags: 0
@@ -8188,6 +8265,7 @@ RectTransform:
   - {fileID: 875654609}
   - {fileID: 428934206}
   - {fileID: 372560758}
+  - {fileID: 1743222900}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
