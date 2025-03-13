@@ -6,7 +6,8 @@ using UnityEngine;
 public class DayMenu_Script : MonoBehaviour
 {
     // Score
-    public int score;
+    public static int score;
+
     [SerializeField] TextMeshProUGUI textScore;
 
     // Ingrédients
@@ -24,22 +25,31 @@ public class DayMenu_Script : MonoBehaviour
     [SerializeField] TextMeshProUGUI textFruits;
 
     //Croissant 
-    private int croissants;
+    public int croissants;
     [SerializeField] TextMeshProUGUI textCroissants;
 
-
-    [SerializeField] Loot Oeuf;
+    //Recette
+    public GameObject spawnPoint;
+    [SerializeField] private  GameObject baguetteObject;
+    [SerializeField] private GameObject briocheObject;
+    [SerializeField] private GameObject croissantObject;
+    [SerializeField] private GameObject muffinObject;
+    [SerializeField] private GameObject gateauObject;
+    private GameObject recette;
 
 
     private Dictionary<string, int> dico = new();
 
+    public static DayMenu_Script instance;
 
+    private void Awake()
+    {
+    instance = this;
+    }
     void Start()
     { 
-        InventoryManager.instance.AddItem(Oeuf);
         dico = InventoryManager.instance.GetInventory() ;
-      
-        Debug.Log(dico["Oeuf"]);
+
         if (dico.ContainsKey("Farine"))
         {
             farine = dico["Farine"];
@@ -86,23 +96,34 @@ public class DayMenu_Script : MonoBehaviour
 
     // Fonctions Boutons
     public void Baguette() 
-    { 
-       
+    {
+        InstantiateRecette(baguetteObject);
     }
     public void Brioche() 
-    { 
-    
+    {
+        InstantiateRecette(briocheObject);
     }
     public void Muffin () 
     {
-    
+        InstantiateRecette(muffinObject);
     }
     public void Gateau () 
-    { 
-    
+    {
+        
+            InstantiateRecette(gateauObject);
+        
     }
-    public void Croissant() 
-    { 
-    
+    public void Croissant()
+    {
+        InstantiateRecette(croissantObject);
+        
+    }
+
+
+    private void InstantiateRecette(GameObject go)
+    {
+        recette = Instantiate(go, spawnPoint.transform.localPosition, transform.localRotation) as GameObject;
+        recette.transform.localScale = new Vector3(1.5f, 1.5f, 1.5f);
+        
     }
 }

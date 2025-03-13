@@ -6,7 +6,7 @@ using UnityEngine;
 public class Recette : ScriptableObject
 {
     // Start is called before the first frame update
-    public Object graphic;
+    public GameObject graphic;
     public string recetteName;
     public int points;
 
