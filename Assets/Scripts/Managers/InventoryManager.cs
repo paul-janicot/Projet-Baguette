@@ -7,7 +7,7 @@ public class InventoryManager : MonoBehaviour
 {
     public static InventoryManager instance;
 
-    [SerializeField] private Dictionary<string, int> inventoryDict;
+    [SerializeField] private Dictionary<string, int> inventoryDict = new();
 
     private void Awake()
     {
@@ -29,7 +29,7 @@ public class InventoryManager : MonoBehaviour
             }
             else
             {
-                inventoryDict[item.lootName] = 1;
+                inventoryDict.Add(item.lootName, 1);
             }
         }
     }

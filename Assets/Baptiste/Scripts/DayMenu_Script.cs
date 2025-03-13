@@ -10,52 +10,63 @@ public class DayMenu_Script : MonoBehaviour
     [SerializeField] TextMeshProUGUI textScore;
 
     // Ingrédients
-    public int farine;
+    private int farine;
     [SerializeField] TextMeshProUGUI textFarine;
-    public int beurre;
+    private int beurre;
     [SerializeField] TextMeshProUGUI textBeurre;
-    public int oeuf;
+    private int oeuf;
     [SerializeField] TextMeshProUGUI textOeuf;
-    public int sucre;
+    private int sucre;
     [SerializeField] TextMeshProUGUI textSucre;
-    public int lait;
+    private int lait;
     [SerializeField] TextMeshProUGUI textLait;
-    public int fruit;
-    [SerializeField] TextMeshProUGUI textFruit;
+    private int fruits;
+    [SerializeField] TextMeshProUGUI textFruits;
 
     //Croissant 
-    public int croissants;
+    private int croissants;
     [SerializeField] TextMeshProUGUI textCroissants;
-   
 
 
+    [SerializeField] Loot Oeuf;
+
+
+    private Dictionary<string, int> dico = new();
 
 
     void Start()
-    {
-        if (InventoryManager.instance.GetInventory().ContainsKey("farine"))
+    { 
+        InventoryManager.instance.AddItem(Oeuf);
+        dico = InventoryManager.instance.GetInventory() ;
+      
+        Debug.Log(dico["Oeuf"]);
+        if (dico.ContainsKey("Farine"))
         {
-            farine = InventoryManager.instance.GetInventory()["farine"];
+            farine = dico["Farine"];
         }
-        if (InventoryManager.instance.GetInventory().ContainsKey("beurre"))
+        if (dico.ContainsKey("Beurre"))
         {
-            beurre = InventoryManager.instance.GetInventory()["beurre"];
+            beurre = dico["Beurre"];
         }
-        if (InventoryManager.instance.GetInventory().ContainsKey("oeuf"))
+        if (dico.ContainsKey("Oeuf"))
         {
-            oeuf = InventoryManager.instance.GetInventory()["oeuf"];
+            oeuf = dico["Oeuf"];
         }
-        if (InventoryManager.instance.GetInventory().ContainsKey("sucre"))
+        if (dico.ContainsKey("Sucre"))
         {
-            sucre = InventoryManager.instance.GetInventory()["sucre"];
+            sucre = dico["Sucre"];
         }
-        if (InventoryManager.instance.GetInventory().ContainsKey("lait"))
+        if (dico.ContainsKey("Lait"))
         {
-            lait = InventoryManager.instance.GetInventory()["lait"];
+            lait = dico["Lait"];
         }
-        if (InventoryManager.instance.GetInventory().ContainsKey("fruit"))
+        if (dico.ContainsKey("Fruits"))
         {
-            fruit = InventoryManager.instance.GetInventory()["fruit"];
+            fruits = dico["Fruits"];
+        }
+        if (dico.ContainsKey("Croissant"))
+        {
+            croissants = dico["Croissant"];
         }
     }
 
@@ -67,14 +78,17 @@ public class DayMenu_Script : MonoBehaviour
         textOeuf.text = "" + oeuf;
         textSucre.text = "" + sucre;
         textLait.text = "" + lait;
-        textFruit.text = "" + fruit;
-        textCroissants.text = "Nombre de croissant :" + croissants;
+        textFruits.text = "" + fruits;
+        textCroissants.text = "Nombre de croissant: " + croissants;
         textScore.text = "" + score;
 
     }
 
     // Fonctions Boutons
-    void Baguette() { }
+    void Baguette() 
+    { 
+       
+    }
     void Brioche() { }
     void Muffin () { }
     void Gateau () { }
