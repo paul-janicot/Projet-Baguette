@@ -121,14 +121,6 @@ public class PlayerMovement : MonoBehaviour
     }
     #endregion
 
-    #region Methods
-    public void DisableForTime(float time)
-    {
-        noMoveTimer = Mathf.Max(time, noMoveTimer);
-        //moveDir = Vector2.zero;
-    }
-    #endregion
-
     #region Maths
     public Vector3 ToVector3(Vector2 vector)
     {

@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 409748767254857584}
   - component: {fileID: 3898863023522718499}
   - component: {fileID: 3490104415804251331}
-  - component: {fileID: 5089108416209823536}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -84,27 +83,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &5089108416209823536
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2590768177236914434}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &6017130129774483332
 GameObject:
   m_ObjectHideFlags: 0
@@ -115,6 +93,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5927267632644001328}
   - component: {fileID: -1781764539771059983}
+  - component: {fileID: 8355807379023306121}
   m_Layer: 0
   m_Name: Attack3
   m_TagString: PlayerAttacks
@@ -152,3 +131,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyKnockback: 2
   enemyStunTime: 1
+--- !u!65 &8355807379023306121
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6017130129774483332}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2, y: 1, z: 4}
+  m_Center: {x: 0, y: 0, z: 2}
