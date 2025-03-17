@@ -109,9 +109,10 @@ public class DayMenu_Script : MonoBehaviour
     }
     public void Gateau () 
     {
-        
+        for (int i = 0; i < 1000; i++)
+        {
             InstantiateRecette(gateauObject);
-        
+        }
     }
     public void Croissant()
     {
