@@ -19,11 +19,12 @@ public class ImpactFrameManager : MonoBehaviour
         {
             Time.timeScale = 1;
         }
+
+        Debug.Log(Time.timeScale);
     }
 
     public void PlayImpactFrame(float time, float timeChange)
     {
-        Debug.Log("tha warudo");
         if (impactFrameTimer > 0)
         {
             if (impactFrameTimer * Time.timeScale < time)
@@ -31,6 +32,11 @@ public class ImpactFrameManager : MonoBehaviour
                 impactFrameTimer = time * timeChange;
                 Time.timeScale = timeChange;
             }
+        }
+        else
+        {
+            impactFrameTimer = time * timeChange;
+            Time.timeScale = timeChange;
         }
     }
 }

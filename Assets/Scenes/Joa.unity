@@ -515,6 +515,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7de302a37382bda49adec20b5c62be69, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  impactFrameTime: 0.5
+  enemyData: {fileID: 11400000, guid: 04c08ea84e03e674d97cdf9ca3d4d1eb, type: 2}
 --- !u!136 &1665955529
 CapsuleCollider:
   m_ObjectHideFlags: 0
