@@ -1,5 +1,7 @@
 using UnityEngine;
 
+// Joa
+
 public class ImpactFrameManager : MonoBehaviour
 {
     public static ImpactFrameManager instance;
@@ -19,13 +21,11 @@ public class ImpactFrameManager : MonoBehaviour
         {
             Time.timeScale = 1;
         }
-
-        Debug.Log(Time.timeScale);
     }
 
-    public void PlayImpactFrame(float time, float timeChange)
+    public void PlayImpactFrame(float time, float timeChange) // If there is another impact frame timer and it is bigger than the current one, don't change it
     {
-        if (impactFrameTimer > 0)
+        if (impactFrameTimer > 0)   
         {
             if (impactFrameTimer * Time.timeScale < time)
             {
