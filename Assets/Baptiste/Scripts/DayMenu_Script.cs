@@ -119,7 +119,7 @@ public class DayMenu_Script : MonoBehaviour
             lait--;
             sucre--;
         }
-        else { InstantiateRecette(briocheObject); }
+       
        
     }
     public void Muffin () 
@@ -146,7 +146,7 @@ public class DayMenu_Script : MonoBehaviour
     }
     public void Croissant()
     {
-        if (farine <= 1 && beurre <= 1)
+        if (farine >= 1 && beurre >= 1)
         {
             InstantiateRecette(croissantObject);
             farine --;
