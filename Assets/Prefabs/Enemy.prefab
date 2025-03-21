@@ -25,7 +25,7 @@ Transform:
   m_GameObject: {fileID: 2461528429890563193}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 1}
+  m_LocalPosition: {x: 0, y: 0.511, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -156,6 +156,7 @@ MonoBehaviour:
   sightRange: 10
   fieldOfView: 90
   enemyData: {fileID: 0}
+  _spawn: {fileID: 4608450939589948578}
   playerMask:
     serializedVersion: 2
     m_Bits: 8
@@ -234,7 +235,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7831940945581569774, guid: 2de165bdee057d845b52fec7456e0ff2, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.4245186
+      value: -0.099
       objectReference: {fileID: 0}
     - target: {fileID: 7831940945581569774, guid: 2de165bdee057d845b52fec7456e0ff2, type: 3}
       propertyPath: m_LocalRotation.w
