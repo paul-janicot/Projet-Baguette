@@ -12,6 +12,8 @@ public class EnemyLife : MonoBehaviour
 
     [SerializeField] private GameObject hitVFX;
 
+    [SerializeField] private float knockbackMultiplier;
+
     private float hp;
 
     private void Awake()
@@ -45,8 +47,6 @@ public class EnemyLife : MonoBehaviour
             }
 
             _rb.AddForce(other.transform.forward * attackData.enemyKnockback, ForceMode.Impulse); //KnockBack
-
-            //ImpactFrameManager.instance.PlayImpactFrame(impactFrameTime, 0.1f);
         }
     }
 }

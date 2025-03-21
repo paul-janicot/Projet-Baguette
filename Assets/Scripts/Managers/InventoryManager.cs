@@ -1,6 +1,4 @@
-using System.Collections;
 using System.Collections.Generic;
-using UnityEditor;
 using UnityEngine;
 
 public class InventoryManager : MonoBehaviour
@@ -8,6 +6,8 @@ public class InventoryManager : MonoBehaviour
     public static InventoryManager instance;
 
     private Dictionary<string, int> inventoryDict = new();
+
+    public static int score;
 
     private void Awake()
     {
