@@ -183,8 +183,7 @@ MonoBehaviour:
   patrolRange: 10
   sightRange: 10
   fieldOfView: 90
-  shootingRange: 7.5
-  shootingSpeed: 0.5
+  enemyData: {fileID: 0}
   playerMask:
     serializedVersion: 2
     m_Bits: 8
