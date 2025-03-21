@@ -55,7 +55,7 @@ public class PlayerLife : MonoBehaviour
             hp -= damage;
             if (hp <= 0)
             {
-                //SceneManager.LoadScene("")
+                SceneManager.LoadScene("GameOver_Menu");
             }
         }
     }

@@ -549,7 +549,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHP: 25
   damageVFX: {fileID: 7666509653474626657, guid: a5ee9be1ab26bdc4d9def18b552415c6, type: 3}
-  invinciblityTime: 2
+  invinciblityTime: 1
+  lifeBar: {fileID: 0}
+  invincibilityFeedback: {fileID: 0}
   hp: 0
 --- !u!114 &6822667216137288137
 MonoBehaviour:
