@@ -12,6 +12,7 @@ TagManager:
   - gateau
   - croissant
   - PlayerAttacks
+  - Enemy
   layers:
   - Default
   - TransparentFX
