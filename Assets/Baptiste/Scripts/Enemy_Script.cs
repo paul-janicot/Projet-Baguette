@@ -16,7 +16,7 @@ public class Enemy_Script : MonoBehaviour
 
     private NavMeshAgent agent; 
     private Transform _transform;
-    private Transform _spawn;
+    [SerializeField] Transform _spawn;
     private bool playerSeen;
     private float eyeCheck; //How often do they check their surrounding for players
     private float shootCheck; //Just a timer for the shooting
@@ -35,7 +35,7 @@ public class Enemy_Script : MonoBehaviour
         agent = GetComponent<NavMeshAgent>();
         _transform = GetComponent<Transform>();
         _player = PlayerMovement.instance.gameObject;
-        _spawn = transform.GetChild(0);
+        //_spawn = transform.GetChild(1);
 
         shootingSpeed = enemyData.shootingSpeed;
         shootingRange = enemyData.shootingRange;
@@ -75,6 +75,7 @@ public class Enemy_Script : MonoBehaviour
        {
         Debug.Log("Shooting");
         _transform.LookAt(_player.transform); //Shoot in the direction of the player
+        Debug.Log(_spawn.position);
         Instantiate(projectile, _spawn.position, _spawn.rotation);
         }
 
