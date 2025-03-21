@@ -1,5 +1,7 @@
 using UnityEngine;
 
+// Joa
+
 [CreateAssetMenu(menuName = "Enemy")]
 public class EnemyData : ScriptableObject
 {
