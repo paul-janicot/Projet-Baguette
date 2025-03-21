@@ -153,8 +153,8 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 620472978}
   - {fileID: 857152756}
+  - {fileID: 620472978}
   m_Father: {fileID: 833997364}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -342,7 +342,7 @@ GameObject:
   - component: {fileID: 48843834}
   - component: {fileID: 48843833}
   - component: {fileID: 48843832}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -527,7 +527,7 @@ MonoBehaviour:
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 2
-  m_VerticalAlignment: 512
+  m_VerticalAlignment: 1024
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -600,8 +600,8 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1365103573}
   - {fileID: 1388606992}
+  - {fileID: 1365103573}
   m_Father: {fileID: 1346883715}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -901,7 +901,7 @@ MonoBehaviour:
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 2
-  m_VerticalAlignment: 512
+  m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -1164,7 +1164,7 @@ GameObject:
   - component: {fileID: 171337764}
   - component: {fileID: 171337763}
   - component: {fileID: 171337762}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1634,7 +1634,7 @@ GameObject:
   - component: {fileID: 286184849}
   - component: {fileID: 286184848}
   - component: {fileID: 286184847}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1936,9 +1936,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1983033614}
     m_Modifications:
+    - target: {fileID: 682903280839131676, guid: dd1c00a1585cd5c4ba8ddfaa47b3f07b, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 5972439397635577853, guid: dd1c00a1585cd5c4ba8ddfaa47b3f07b, type: 3}
       propertyPath: m_Name
       value: Tapis roulant (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5972439397635577853, guid: dd1c00a1585cd5c4ba8ddfaa47b3f07b, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6589799023545113337, guid: dd1c00a1585cd5c4ba8ddfaa47b3f07b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1979,6 +1987,18 @@ PrefabInstance:
     - target: {fileID: 6589799023545113337, guid: dd1c00a1585cd5c4ba8ddfaa47b3f07b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7356998180153186695, guid: dd1c00a1585cd5c4ba8ddfaa47b3f07b, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7490530878296698289, guid: dd1c00a1585cd5c4ba8ddfaa47b3f07b, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8705064608166090424, guid: dd1c00a1585cd5c4ba8ddfaa47b3f07b, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2110,7 +2130,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '-2
+  m_text: '
 
 '
   m_isRightToLeft: 0
@@ -2354,8 +2374,8 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 381722088}
   - {fileID: 77829463}
+  - {fileID: 381722088}
   m_Father: {fileID: 1394428342}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -2759,9 +2779,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '-2
-
-'
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -3252,12 +3270,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   changementFarine: {fileID: 671831118}
-  changementBeurre: {fileID: 1365103574}
-  changementOeuf: {fileID: 1147863820}
-  changementSucre: {fileID: 381722089}
-  changementLait: {fileID: 620472979}
-  changementFruits: {fileID: 1627306922}
-  deuxFarine: 0
+  changementBeurre: {fileID: 0}
+  changementOeuf: {fileID: 0}
+  changementSucre: {fileID: 0}
+  changementLait: {fileID: 0}
+  changementFruits: {fileID: 0}
+  deuxFarine: 1
   deuxBeurre: 0
   deuxOeuf: 0
   deuxSucre: 0
@@ -3410,9 +3428,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1983033614}
     m_Modifications:
+    - target: {fileID: 682903280839131676, guid: dd1c00a1585cd5c4ba8ddfaa47b3f07b, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 5972439397635577853, guid: dd1c00a1585cd5c4ba8ddfaa47b3f07b, type: 3}
       propertyPath: m_Name
       value: Tapis roulant
+      objectReference: {fileID: 0}
+    - target: {fileID: 5972439397635577853, guid: dd1c00a1585cd5c4ba8ddfaa47b3f07b, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6589799023545113337, guid: dd1c00a1585cd5c4ba8ddfaa47b3f07b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3453,6 +3479,18 @@ PrefabInstance:
     - target: {fileID: 6589799023545113337, guid: dd1c00a1585cd5c4ba8ddfaa47b3f07b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7356998180153186695, guid: dd1c00a1585cd5c4ba8ddfaa47b3f07b, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7490530878296698289, guid: dd1c00a1585cd5c4ba8ddfaa47b3f07b, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8705064608166090424, guid: dd1c00a1585cd5c4ba8ddfaa47b3f07b, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4248,7 +4286,7 @@ GameObject:
   - component: {fileID: 903467291}
   - component: {fileID: 903467293}
   - component: {fileID: 903467292}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Wall (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4463,7 +4501,7 @@ GameObject:
   - component: {fileID: 961815305}
   - component: {fileID: 961815307}
   - component: {fileID: 961815306}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4710,10 +4748,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   changementFarine: {fileID: 671831118}
   changementBeurre: {fileID: 1365103574}
-  changementOeuf: {fileID: 1147863820}
-  changementSucre: {fileID: 381722089}
-  changementLait: {fileID: 620472979}
-  changementFruits: {fileID: 1627306922}
+  changementOeuf: {fileID: 0}
+  changementSucre: {fileID: 0}
+  changementLait: {fileID: 0}
+  changementFruits: {fileID: 0}
   deuxFarine: 0
   deuxBeurre: 0
   deuxOeuf: 0
@@ -4728,9 +4766,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1983033614}
     m_Modifications:
+    - target: {fileID: 682903280839131676, guid: dd1c00a1585cd5c4ba8ddfaa47b3f07b, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 5972439397635577853, guid: dd1c00a1585cd5c4ba8ddfaa47b3f07b, type: 3}
       propertyPath: m_Name
       value: Tapis roulant (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5972439397635577853, guid: dd1c00a1585cd5c4ba8ddfaa47b3f07b, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6589799023545113337, guid: dd1c00a1585cd5c4ba8ddfaa47b3f07b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4771,6 +4817,18 @@ PrefabInstance:
     - target: {fileID: 6589799023545113337, guid: dd1c00a1585cd5c4ba8ddfaa47b3f07b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7356998180153186695, guid: dd1c00a1585cd5c4ba8ddfaa47b3f07b, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7490530878296698289, guid: dd1c00a1585cd5c4ba8ddfaa47b3f07b, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8705064608166090424, guid: dd1c00a1585cd5c4ba8ddfaa47b3f07b, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5088,11 +5146,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   changementFarine: {fileID: 671831118}
   changementBeurre: {fileID: 1365103574}
-  changementOeuf: {fileID: 1147863820}
+  changementOeuf: {fileID: 0}
   changementSucre: {fileID: 381722089}
   changementLait: {fileID: 620472979}
-  changementFruits: {fileID: 1627306922}
-  deuxFarine: 0
+  changementFruits: {fileID: 0}
+  deuxFarine: 1
   deuxBeurre: 0
   deuxOeuf: 0
   deuxSucre: 0
@@ -5285,9 +5343,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1983033614}
     m_Modifications:
+    - target: {fileID: 682903280839131676, guid: dd1c00a1585cd5c4ba8ddfaa47b3f07b, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 5972439397635577853, guid: dd1c00a1585cd5c4ba8ddfaa47b3f07b, type: 3}
       propertyPath: m_Name
       value: Tapis roulant (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5972439397635577853, guid: dd1c00a1585cd5c4ba8ddfaa47b3f07b, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6589799023545113337, guid: dd1c00a1585cd5c4ba8ddfaa47b3f07b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5329,6 +5395,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7356998180153186695, guid: dd1c00a1585cd5c4ba8ddfaa47b3f07b, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7490530878296698289, guid: dd1c00a1585cd5c4ba8ddfaa47b3f07b, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8705064608166090424, guid: dd1c00a1585cd5c4ba8ddfaa47b3f07b, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5348,7 +5426,7 @@ GameObject:
   - component: {fileID: 1070002739}
   - component: {fileID: 1070002743}
   - component: {fileID: 1070002744}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5443,6 +5521,10 @@ Transform:
   - {fileID: 171337761}
   - {fileID: 2053530150}
   - {fileID: 1341090411}
+  - {fileID: 1532314267}
+  - {fileID: 2120868289}
+  - {fileID: 1642625622}
+  - {fileID: 1262872196}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1070002743
@@ -5486,9 +5568,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1983033614}
     m_Modifications:
+    - target: {fileID: 682903280839131676, guid: dd1c00a1585cd5c4ba8ddfaa47b3f07b, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 5972439397635577853, guid: dd1c00a1585cd5c4ba8ddfaa47b3f07b, type: 3}
       propertyPath: m_Name
       value: Tapis roulant (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5972439397635577853, guid: dd1c00a1585cd5c4ba8ddfaa47b3f07b, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6589799023545113337, guid: dd1c00a1585cd5c4ba8ddfaa47b3f07b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5530,6 +5620,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7356998180153186695, guid: dd1c00a1585cd5c4ba8ddfaa47b3f07b, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7490530878296698289, guid: dd1c00a1585cd5c4ba8ddfaa47b3f07b, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8705064608166090424, guid: dd1c00a1585cd5c4ba8ddfaa47b3f07b, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5547,7 +5649,7 @@ GameObject:
   - component: {fileID: 1147863821}
   - component: {fileID: 1147863820}
   m_Layer: 5
-  m_Name: Changement Valeur
+  m_Name: Changement Valeur Oeuf
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5677,9 +5779,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1983033614}
     m_Modifications:
+    - target: {fileID: 682903280839131676, guid: dd1c00a1585cd5c4ba8ddfaa47b3f07b, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 5972439397635577853, guid: dd1c00a1585cd5c4ba8ddfaa47b3f07b, type: 3}
       propertyPath: m_Name
       value: Tapis roulant (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5972439397635577853, guid: dd1c00a1585cd5c4ba8ddfaa47b3f07b, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6589799023545113337, guid: dd1c00a1585cd5c4ba8ddfaa47b3f07b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5720,6 +5830,18 @@ PrefabInstance:
     - target: {fileID: 6589799023545113337, guid: dd1c00a1585cd5c4ba8ddfaa47b3f07b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7356998180153186695, guid: dd1c00a1585cd5c4ba8ddfaa47b3f07b, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7490530878296698289, guid: dd1c00a1585cd5c4ba8ddfaa47b3f07b, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8705064608166090424, guid: dd1c00a1585cd5c4ba8ddfaa47b3f07b, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5905,7 +6027,7 @@ MonoBehaviour:
   changementBeurre: {fileID: 1365103574}
   changementOeuf: {fileID: 1147863820}
   changementSucre: {fileID: 381722089}
-  changementLait: {fileID: 620472979}
+  changementLait: {fileID: 0}
   changementFruits: {fileID: 1627306922}
   deuxFarine: 0
   deuxBeurre: 0
@@ -6089,14 +6211,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   changementFarine: {fileID: 671831118}
-  changementBeurre: {fileID: 1365103574}
+  changementBeurre: {fileID: 0}
   changementOeuf: {fileID: 1147863820}
   changementSucre: {fileID: 381722089}
-  changementLait: {fileID: 620472979}
+  changementLait: {fileID: 0}
   changementFruits: {fileID: 1627306922}
   deuxFarine: 0
   deuxBeurre: 0
-  deuxOeuf: 0
+  deuxOeuf: 1
   deuxSucre: 0
   deuxLait: 0
   deuxFruits: 0
@@ -6111,7 +6233,7 @@ GameObject:
   - component: {fileID: 1262872196}
   - component: {fileID: 1262872195}
   - component: {fileID: 1262872194}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Wall (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6175,11 +6297,11 @@ Transform:
   m_GameObject: {fileID: 1262872193}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.47, y: -2.18, z: -0.05}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -0.5783334, y: 18, z: -0.008333334}
+  m_LocalScale: {x: 0.16666667, y: 10, z: 0.16666667}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1070002742}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1276502479
 GameObject:
@@ -6397,7 +6519,7 @@ GameObject:
   - component: {fileID: 1341090414}
   - component: {fileID: 1341090413}
   - component: {fileID: 1341090412}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6900,8 +7022,8 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1147863819}
   - {fileID: 946590378}
+  - {fileID: 1147863819}
   m_Father: {fileID: 633619740}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -7108,8 +7230,8 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 671831117}
   - {fileID: 1003590568}
+  - {fileID: 671831117}
   m_Father: {fileID: 1050336002}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -7333,7 +7455,7 @@ GameObject:
   - component: {fileID: 1532314267}
   - component: {fileID: 1532314266}
   - component: {fileID: 1532314265}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Wall (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7397,11 +7519,11 @@ Transform:
   m_GameObject: {fileID: 1532314264}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.13, y: -1.09, z: -3.42}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -0.021666666, y: 28.899998, z: -0.57000005}
+  m_LocalScale: {x: 0.16666667, y: 10, z: 0.16666667}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1070002742}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1537544843
 GameObject:
@@ -7427,12 +7549,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1537544843}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -12.97, y: 1.56, z: -0.367}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -12.97, y: 1.56, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1983033614}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1540012464
 PrefabInstance:
@@ -7442,9 +7564,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1983033614}
     m_Modifications:
+    - target: {fileID: 682903280839131676, guid: dd1c00a1585cd5c4ba8ddfaa47b3f07b, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 5972439397635577853, guid: dd1c00a1585cd5c4ba8ddfaa47b3f07b, type: 3}
       propertyPath: m_Name
       value: Tapis roulant (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5972439397635577853, guid: dd1c00a1585cd5c4ba8ddfaa47b3f07b, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6589799023545113337, guid: dd1c00a1585cd5c4ba8ddfaa47b3f07b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -7486,145 +7616,23 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7356998180153186695, guid: dd1c00a1585cd5c4ba8ddfaa47b3f07b, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7490530878296698289, guid: dd1c00a1585cd5c4ba8ddfaa47b3f07b, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8705064608166090424, guid: dd1c00a1585cd5c4ba8ddfaa47b3f07b, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dd1c00a1585cd5c4ba8ddfaa47b3f07b, type: 3}
---- !u!1 &1562094005
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1562094006}
-  - component: {fileID: 1562094008}
-  - component: {fileID: 1562094007}
-  m_Layer: 5
-  m_Name: Nombre de Jour
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1562094006
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1562094005}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 2057622310}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.35375002, y: 0.89964706}
-  m_AnchorMax: {x: 0.65024996, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: -0.0000076293945}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1562094007
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1562094005}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_text: "N\xB0 Jour\n"
-  m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_fontSharedMaterials: []
-  m_fontMaterial: {fileID: 0}
-  m_fontMaterials: []
-  m_fontColor32:
-    serializedVersion: 2
-    rgba: 4278979596
-  m_fontColor: {r: 0.047169805, g: 0.04605731, b: 0.04605731, a: 1}
-  m_enableVertexGradient: 0
-  m_colorMode: 3
-  m_fontColorGradient:
-    topLeft: {r: 1, g: 1, b: 1, a: 1}
-    topRight: {r: 1, g: 1, b: 1, a: 1}
-    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
-    bottomRight: {r: 1, g: 1, b: 1, a: 1}
-  m_fontColorGradientPreset: {fileID: 0}
-  m_spriteAsset: {fileID: 0}
-  m_tintAllSprites: 0
-  m_StyleSheet: {fileID: 0}
-  m_TextStyleHashCode: -1183493901
-  m_overrideHtmlColors: 0
-  m_faceColor:
-    serializedVersion: 2
-    rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
-  m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
-  m_fontStyle: 0
-  m_HorizontalAlignment: 2
-  m_VerticalAlignment: 512
-  m_textAlignment: 65535
-  m_characterSpacing: 0
-  m_wordSpacing: 0
-  m_lineSpacing: 0
-  m_lineSpacingMax: 0
-  m_paragraphSpacing: 0
-  m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
-  m_wordWrappingRatios: 0.4
-  m_overflowMode: 0
-  m_linkedTextComponent: {fileID: 0}
-  parentLinkedComponent: {fileID: 0}
-  m_enableKerning: 1
-  m_enableExtraPadding: 0
-  checkPaddingRequired: 0
-  m_isRichText: 1
-  m_parseCtrlCharacters: 1
-  m_isOrthographic: 1
-  m_isCullingEnabled: 0
-  m_horizontalMapping: 0
-  m_verticalMapping: 0
-  m_uvLineOffset: 0
-  m_geometrySortingOrder: 0
-  m_IsTextObjectScaleStatic: 0
-  m_VertexBufferAutoSizeReduction: 0
-  m_useMaxVisibleDescender: 1
-  m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: -0.29581833}
-  m_isUsingLegacyAnimationComponent: 0
-  m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
-  m_baseMaterial: {fileID: 0}
-  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!222 &1562094008
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1562094005}
-  m_CullTransparentMesh: 1
 --- !u!1 &1588549972
 GameObject:
   m_ObjectHideFlags: 0
@@ -7637,7 +7645,7 @@ GameObject:
   - component: {fileID: 1588549976}
   - component: {fileID: 1588549975}
   - component: {fileID: 1588549974}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Mat (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7787,9 +7795,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '-2
-
-'
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -7952,7 +7958,7 @@ GameObject:
   - component: {fileID: 1642625622}
   - component: {fileID: 1642625621}
   - component: {fileID: 1642625620}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Wall (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8016,11 +8022,11 @@ Transform:
   m_GameObject: {fileID: 1642625619}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.47, y: -1.09, z: -0.05}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0.5783334, y: 28.899998, z: -0.008333334}
+  m_LocalScale: {x: 0.16666667, y: 10, z: 0.16666667}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1070002742}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1685019510
 GameObject:
@@ -8034,7 +8040,7 @@ GameObject:
   - component: {fileID: 1685019514}
   - component: {fileID: 1685019513}
   - component: {fileID: 1685019512}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8453,6 +8459,7 @@ MonoBehaviour:
   textFruits: {fileID: 739812219}
   croissants: 0
   textCroissants: {fileID: 93327221}
+  croissantsData: {fileID: 11400000, guid: f34dc580f8f910242afa670aa8ee94e6, type: 2}
   spawnPoint: {fileID: 1537544843}
   baguetteObject: {fileID: 7683432686312486075, guid: d00ba512e9fa70d44a0c3d4517684696, type: 3}
   briocheObject: {fileID: 7171102839133381655, guid: 80c2a65cc1047574888bac471b1e4592, type: 3}
@@ -8479,9 +8486,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1983033614}
     m_Modifications:
+    - target: {fileID: 682903280839131676, guid: dd1c00a1585cd5c4ba8ddfaa47b3f07b, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 5972439397635577853, guid: dd1c00a1585cd5c4ba8ddfaa47b3f07b, type: 3}
       propertyPath: m_Name
       value: Tapis roulant (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5972439397635577853, guid: dd1c00a1585cd5c4ba8ddfaa47b3f07b, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6589799023545113337, guid: dd1c00a1585cd5c4ba8ddfaa47b3f07b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -8523,6 +8538,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7356998180153186695, guid: dd1c00a1585cd5c4ba8ddfaa47b3f07b, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7490530878296698289, guid: dd1c00a1585cd5c4ba8ddfaa47b3f07b, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8705064608166090424, guid: dd1c00a1585cd5c4ba8ddfaa47b3f07b, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8539,7 +8566,7 @@ GameObject:
   - component: {fileID: 1770628177}
   - component: {fileID: 1770628179}
   - component: {fileID: 1770628178}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Wall (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8666,7 +8693,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '200 Points
+  m_text: '250 Points
 
 '
   m_isRightToLeft: 0
@@ -8757,7 +8784,7 @@ GameObject:
   - component: {fileID: 1832807603}
   - component: {fileID: 1832807602}
   - component: {fileID: 1832807601}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8881,8 +8908,8 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1627306921}
   - {fileID: 739812218}
+  - {fileID: 1627306921}
   m_Father: {fileID: 22776551}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -9038,7 +9065,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1983033614}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Rolling Mat
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9073,7 +9100,6 @@ Transform:
   - {fileID: 1685019511}
   - {fileID: 286184846}
   - {fileID: 1832807600}
-  - {fileID: 1537544844}
   - {fileID: 961815305}
   - {fileID: 903467291}
   - {fileID: 1770628177}
@@ -9087,9 +9113,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1983033614}
     m_Modifications:
+    - target: {fileID: 682903280839131676, guid: dd1c00a1585cd5c4ba8ddfaa47b3f07b, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 5972439397635577853, guid: dd1c00a1585cd5c4ba8ddfaa47b3f07b, type: 3}
       propertyPath: m_Name
       value: Tapis roulant (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5972439397635577853, guid: dd1c00a1585cd5c4ba8ddfaa47b3f07b, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6589799023545113337, guid: dd1c00a1585cd5c4ba8ddfaa47b3f07b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -9130,6 +9164,18 @@ PrefabInstance:
     - target: {fileID: 6589799023545113337, guid: dd1c00a1585cd5c4ba8ddfaa47b3f07b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7356998180153186695, guid: dd1c00a1585cd5c4ba8ddfaa47b3f07b, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7490530878296698289, guid: dd1c00a1585cd5c4ba8ddfaa47b3f07b, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8705064608166090424, guid: dd1c00a1585cd5c4ba8ddfaa47b3f07b, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9193,7 +9239,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Menu
+  m_text: Quit
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -9552,7 +9598,7 @@ GameObject:
   - component: {fileID: 2053530153}
   - component: {fileID: 2053530152}
   - component: {fileID: 2053530151}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9741,7 +9787,6 @@ RectTransform:
   m_Children:
   - {fileID: 288668815}
   - {fileID: 1276502480}
-  - {fileID: 1562094006}
   - {fileID: 875654609}
   - {fileID: 428934206}
   - {fileID: 372560758}
@@ -9761,9 +9806,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1983033614}
     m_Modifications:
+    - target: {fileID: 682903280839131676, guid: dd1c00a1585cd5c4ba8ddfaa47b3f07b, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 5972439397635577853, guid: dd1c00a1585cd5c4ba8ddfaa47b3f07b, type: 3}
       propertyPath: m_Name
       value: Tapis roulant (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5972439397635577853, guid: dd1c00a1585cd5c4ba8ddfaa47b3f07b, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6589799023545113337, guid: dd1c00a1585cd5c4ba8ddfaa47b3f07b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -9804,6 +9857,18 @@ PrefabInstance:
     - target: {fileID: 6589799023545113337, guid: dd1c00a1585cd5c4ba8ddfaa47b3f07b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7356998180153186695, guid: dd1c00a1585cd5c4ba8ddfaa47b3f07b, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7490530878296698289, guid: dd1c00a1585cd5c4ba8ddfaa47b3f07b, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8705064608166090424, guid: dd1c00a1585cd5c4ba8ddfaa47b3f07b, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9892,7 +9957,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2097821538}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1743222901}
+        m_TargetAssemblyTypeName: DayMenu_Script, Assembly-CSharp
+        m_MethodName: NextLevel
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2097821538
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9942,7 +10019,7 @@ GameObject:
   - component: {fileID: 2120868289}
   - component: {fileID: 2120868288}
   - component: {fileID: 2120868287}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Wall (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10006,11 +10083,11 @@ Transform:
   m_GameObject: {fileID: 2120868286}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.13, y: -1.09, z: 3.43}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -0.021666666, y: 28.899998, z: 0.5716667}
+  m_LocalScale: {x: 0.16666667, y: 10, z: 0.16666667}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1070002742}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2121758586
 GameObject:
@@ -10143,7 +10220,7 @@ GameObject:
   - component: {fileID: 2126081217}
   - component: {fileID: 2126081219}
   - component: {fileID: 2126081220}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Mat
   m_TagString: mat
   m_Icon: {fileID: 0}
@@ -10345,7 +10422,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2127767134}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1743222901}
+        m_TargetAssemblyTypeName: DayMenu_Script, Assembly-CSharp
+        m_MethodName: Quit
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2127767134
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10394,12 +10483,9 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 358087000}
+  - {fileID: 1537544844}
   - {fileID: 1983033614}
   - {fileID: 2121758588}
   - {fileID: 2057622310}
   - {fileID: 692377757}
   - {fileID: 1070002742}
-  - {fileID: 1532314267}
-  - {fileID: 2120868289}
-  - {fileID: 1642625622}
-  - {fileID: 1262872196}

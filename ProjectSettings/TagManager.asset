@@ -11,6 +11,7 @@ TagManager:
   - muffin
   - gateau
   - croissant
+  - PlayerAttacks
   layers:
   - Default
   - TransparentFX
@@ -19,7 +20,7 @@ TagManager:
   - Water
   - UI
   - Obstacle
-  - 
+  - Recette
   - 
   - 
   - 

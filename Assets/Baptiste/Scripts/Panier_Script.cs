@@ -37,6 +37,7 @@ public class Panier_Script : MonoBehaviour
         if (other.CompareTag("croissant"))
         {
             DayMenu_Script.instance.croissants++;
+            InventoryManager.instance.AddItem(DayMenu_Script.instance.croissantsData);
         }
     }
 }

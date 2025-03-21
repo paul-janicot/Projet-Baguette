@@ -53,6 +53,10 @@ PrefabInstance:
       value: loaf
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 657f5566bf1ea3c4c9d9a2d299bfcfac, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 657f5566bf1ea3c4c9d9a2d299bfcfac, type: 3}
       propertyPath: m_TagString
       value: brioche
       objectReference: {fileID: 0}
