@@ -178,6 +178,8 @@ MonoBehaviour:
   impactFrameTime: 0
   enemyData: {fileID: 11400000, guid: 04c08ea84e03e674d97cdf9ca3d4d1eb, type: 2}
   hitVFX: {fileID: 7666509653474626657, guid: a5ee9be1ab26bdc4d9def18b552415c6, type: 3}
+  knockbackMultiplier: 0
+  numberOfItem: 2
 --- !u!114 &8975369398098864210
 MonoBehaviour:
   m_ObjectHideFlags: 0

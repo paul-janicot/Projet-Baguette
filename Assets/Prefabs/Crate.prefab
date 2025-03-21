@@ -121,8 +121,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   impactFrameTime: 0
-  enemyData: {fileID: 11400000, guid: b753c9411604fb1439aa9e7b215c76d6, type: 2}
-  hitVFX: {fileID: 0}
+  enemyData: {fileID: 11400000, guid: 8cdde06c1737f0d49930ab06e3ce54d3, type: 2}
+  hitVFX: {fileID: 7666509653474626657, guid: a5ee9be1ab26bdc4d9def18b552415c6, type: 3}
+  knockbackMultiplier: 0
+  numberOfItem: 5
 --- !u!54 &8380618962003757581
 Rigidbody:
   m_ObjectHideFlags: 0

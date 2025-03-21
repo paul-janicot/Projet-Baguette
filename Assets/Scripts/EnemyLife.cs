@@ -14,6 +14,8 @@ public class EnemyLife : MonoBehaviour
 
     [SerializeField] private float knockbackMultiplier;
 
+    [SerializeField] private int numberOfItem;
+
     private float hp;
 
     private void Awake()
@@ -40,7 +42,11 @@ public class EnemyLife : MonoBehaviour
             {
                 if (enemyData.isDropping)
                 {
-                    GetComponent<LootBag>().InstantiateLoot(transform.position);
+                    for (int i = 0; i < numberOfItem; i++)
+                    {
+                        GetComponent<LootBag>().InstantiateLoot(transform.position);
+                    }
+                    
                 }
 
                 Destroy(gameObject);
