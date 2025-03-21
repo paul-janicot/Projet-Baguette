@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 // Joa
 
@@ -10,6 +11,9 @@ public class PlayerLife : MonoBehaviour
     [SerializeField] private float maxHP;
     [SerializeField] private GameObject damageVFX;
     [SerializeField] private float invinciblityTime;
+
+    [SerializeField] private Image lifeBar;
+    [SerializeField] private Image invincibilityFeedback;
 
     public float hp;
 
@@ -25,9 +29,20 @@ public class PlayerLife : MonoBehaviour
         hp = maxHP;
     }
 
-    private void FixedUpdate()
+    private void Update()
     {
         invincibilityTimer -= Time.deltaTime;
+
+        if (invincibilityTimer > 0)
+        {
+            invincibilityFeedback.color = new Color(invincibilityFeedback.color.r, invincibilityFeedback.color.g, invincibilityFeedback.color.b, invincibilityTimer / invinciblityTime);
+        }
+        else
+        {
+            invincibilityFeedback.color = new Color(invincibilityFeedback.color.r, invincibilityFeedback.color.g, invincibilityFeedback.color.b, 0);
+        }
+
+        lifeBar.fillAmount = hp/maxHP;
     }
 
     public void TakeDamage(float damage)
