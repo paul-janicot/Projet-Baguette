@@ -53,6 +53,10 @@ PrefabInstance:
       value: Baguette
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 94816599104e1b64799dfa5e45186987, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 94816599104e1b64799dfa5e45186987, type: 3}
       propertyPath: m_TagString
       value: baguette
       objectReference: {fileID: 0}

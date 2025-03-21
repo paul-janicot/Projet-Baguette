@@ -24,7 +24,7 @@ public class Panier_Script : MonoBehaviour
         }
         if (other.CompareTag("brioche"))
         {
-            DayMenu_Script.score += 200;
+            DayMenu_Script.score += 250;
         }
         if (other.CompareTag("muffin"))
         {
@@ -37,6 +37,7 @@ public class Panier_Script : MonoBehaviour
         if (other.CompareTag("croissant"))
         {
             DayMenu_Script.instance.croissants++;
+            InventoryManager.instance.AddItem(DayMenu_Script.instance.croissantsData);
         }
     }
 }

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class DayMenu_Script : MonoBehaviour
 {
@@ -27,6 +28,7 @@ public class DayMenu_Script : MonoBehaviour
     //Croissant 
     public int croissants;
     [SerializeField] TextMeshProUGUI textCroissants;
+    [SerializeField]public Loot croissantsData;
 
     //Recette
     public GameObject spawnPoint;
@@ -97,33 +99,97 @@ public class DayMenu_Script : MonoBehaviour
     // Fonctions Boutons
     public void Baguette() 
     {
-        InstantiateRecette(baguetteObject);
+        if (farine >= 2)
+        {
+            InstantiateRecette(baguetteObject);
+            farine -= 2;
+        }
     }
     public void Brioche() 
     {
-        InstantiateRecette(briocheObject);
+        if (farine >= 2 && oeuf >= 2 && beurre >= 1 && lait >= 1 && sucre >= 1)
+        {
+            InstantiateRecette(briocheObject);
+            farine -= 2;
+            oeuf -= 2;
+            beurre--;
+            lait--;
+            sucre--;
+        }
+        else { InstantiateRecette(briocheObject); }
+       
     }
     public void Muffin () 
     {
-        InstantiateRecette(muffinObject);
+        if (farine >= 1 && beurre >= 1 && sucre >= 1 && oeuf >= 1)
+        {
+            InstantiateRecette(muffinObject);
+            farine--;
+            beurre--;
+            sucre--;
+            oeuf--;
+        }
     }
     public void Gateau () 
     {
-        for (int i = 0; i < 1000; i++)
+       if(farine >= 1 &&  oeuf >= 2 && sucre >= 1 && fruits >= 1)
         {
             InstantiateRecette(gateauObject);
+            farine--;
+            oeuf -= 2;
+            sucre--;
+            fruits -= 1;
         }
     }
     public void Croissant()
     {
-        InstantiateRecette(croissantObject);
+        if (farine <= 1 && beurre <= 1)
+        {
+            InstantiateRecette(croissantObject);
+            farine --;
+            beurre --;
+        }
         
     }
 
-
-    private void InstantiateRecette(GameObject go)
+    public void Quit()
     {
-        recette = Instantiate(go, spawnPoint.transform.localPosition, transform.localRotation) as GameObject;
+        Application.Quit();
+    }
+    public void NextLevel()
+    {
+        Collider[] hitColliders = Physics.OverlapBox(spawnPoint.transform.localPosition, new Vector3(13, 3, 5), spawnPoint.transform.rotation, 1);
+        for (int i = 0; i < hitColliders.Length; i++)
+        { Debug.Log(hitColliders[i].name);
+            if (hitColliders[i].CompareTag("baguette"))
+            {
+                score += 100;
+            }
+            if (hitColliders[i].CompareTag("brioche"))
+            {
+                score += 250;
+            }
+            if (hitColliders[i].CompareTag("muffin"))
+            {
+                score += 300;
+            }
+            if (hitColliders[i].CompareTag("gateau"))
+            {
+                score += 350;
+            }
+            if (hitColliders[i].CompareTag("croissant"))
+            {
+                croissants++;
+                InventoryManager.instance.AddItem(croissantsData);
+            }
+        }
+       SceneManager.LoadScene("Night");
+    }
+
+
+    private void InstantiateRecette(GameObject recetteGO)
+    {
+        recette = Instantiate(recetteGO, spawnPoint.transform.localPosition, transform.localRotation) as GameObject;
         recette.transform.localScale = new Vector3(1.5f, 1.5f, 1.5f);
         
     }
