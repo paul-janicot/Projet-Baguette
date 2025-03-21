@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/DayMenu_Baptiste.unity
     guid: b2ff7def4f3085941937d7f8ef4f1378
+  - enabled: 1
+    path: Assets/Scenes/GameOver_Menu.unity
+    guid: d0203e8443bafb64ab4a387ca4e4ce2a
   m_configObjects: {}

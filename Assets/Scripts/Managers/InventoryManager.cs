@@ -1,11 +1,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+// Joa
+
 public class InventoryManager : MonoBehaviour
 {
     public static InventoryManager instance;
 
-    private Dictionary<string, int> inventoryDict = new();
+    private static Dictionary<string, int> inventoryDict = new();
 
     public static int score;
 
@@ -19,18 +21,23 @@ public class InventoryManager : MonoBehaviour
         return inventoryDict;
     }
 
-    public void AddItem(Loot item)
+    public void AddItem(string item)
     {
         if (inventoryDict != null)
         {
-            if (inventoryDict.ContainsKey(item.lootName))
+            if (inventoryDict.ContainsKey(item))
             {
-                inventoryDict[item.lootName]++;
+                inventoryDict[item]++;
             }
             else
             {
-                inventoryDict.Add(item.lootName, 1);
+                inventoryDict.Add(item, 1);
             }
+        }
+
+        foreach (string a in inventoryDict.Keys)
+        {
+            Debug.Log(a + " " + inventoryDict[a]);
         }
     }
 
@@ -51,4 +58,8 @@ public class InventoryManager : MonoBehaviour
         return false;
     }
 
+    public void ResetInventory()
+    {
+        inventoryDict = new();
+    }
 }

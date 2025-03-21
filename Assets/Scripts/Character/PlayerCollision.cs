@@ -9,7 +9,7 @@ public class PlayerCollision : MonoBehaviour
         if (collision.gameObject.CompareTag("Item"))
         {
             Loot itemData = collision.gameObject.GetComponent<ItemDataHolder>().data;
-            InventoryManager.instance.AddItem(itemData);
+            InventoryManager.instance.AddItem(itemData.lootName);
             Destroy(collision.gameObject);
         }
         else if (collision.gameObject.CompareTag("Enemy"))

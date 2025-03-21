@@ -73,11 +73,9 @@ public class Enemy_Script : MonoBehaviour
 
        private void Shoot() 
        {
-        Debug.Log("Shooting");
         _transform.LookAt(_player.transform); //Shoot in the direction of the player
-        Debug.Log(_spawn.position);
         Instantiate(projectile, _spawn.position, _spawn.rotation);
-        }
+       }
 
         bool RandomRoam(Vector3 center, float range, out Vector3 result)
         {

@@ -1,8 +1,9 @@
-using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+
+// Baptiste
 
 public class DayMenu_Script : MonoBehaviour
 {
@@ -38,7 +39,6 @@ public class DayMenu_Script : MonoBehaviour
     [SerializeField] private GameObject muffinObject;
     [SerializeField] private GameObject gateauObject;
     private GameObject recette;
-
 
     private Dictionary<string, int> dico = new();
 
@@ -82,7 +82,12 @@ public class DayMenu_Script : MonoBehaviour
             croissants = dico["Croissant"];
         }
 
-       score = InventoryManager.score;
+        score = InventoryManager.score;
+
+        foreach (string a  in dico.Keys)
+        {
+            Debug.Log(a + " " + dico[a]);
+        }
     }
 
     // Update is called once per frame
@@ -182,13 +187,13 @@ public class DayMenu_Script : MonoBehaviour
             }
             if (hitColliders[i].CompareTag("croissant"))
             {
-                croissants++;
-                InventoryManager.instance.AddItem(croissantsData);
+                croissants += 3;
+                InventoryManager.instance.AddItem("Croissant");
             }
         }
 
         InventoryManager.score = score;
-       SceneManager.LoadScene("Night");
+        SceneManager.LoadScene("Night");
     }
 
 

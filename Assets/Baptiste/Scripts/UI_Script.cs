@@ -1,9 +1,8 @@
-using GLTFast.Schema;
-using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+
+// Baptiste
 
 public class UI_Script : MonoBehaviour
 {
@@ -23,5 +22,7 @@ public class UI_Script : MonoBehaviour
     public void Replay()
     {
        SceneManager.LoadScene("Night");
+       InventoryManager.score = 0;
+       InventoryManager.instance.ResetInventory();
     }
 }
