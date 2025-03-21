@@ -1,6 +1,8 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
+// Joa
+
 public class PlayerAttack : MonoBehaviour
 {
     public static PlayerAttack instance;
@@ -70,8 +72,6 @@ public class PlayerAttack : MonoBehaviour
                 isRangeAttacking = true;
                 lastRangeAttackTimer = rangeAttackCooldown;
 
-                movement.DisableForTime(rangeAttackDontMoveTime);
-
                 GameObject currentAttack = Instantiate(croissantPrefab, rangeSpawn.transform.position, Quaternion.identity);
                 currentAttack.transform.forward = direction.forward;
                 Destroy(currentAttack, croissantLifespan);
@@ -88,8 +88,6 @@ public class PlayerAttack : MonoBehaviour
             if (lastNormalAttackTimer <=0 && !movement.isDashing)
             {
                 isNormalAttacking = true;
-
-                movement.DisableForTime(normalAttackDontMoveTime);
 
                 //change the attack index for combo
                 if (lastNormalAttackTimer < -comboCooldown)  

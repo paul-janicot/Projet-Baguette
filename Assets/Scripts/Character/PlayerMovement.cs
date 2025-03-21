@@ -1,7 +1,7 @@
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
+// Joa
 public class PlayerMovement : MonoBehaviour
 {
     #region Setup Values -> Awake
@@ -118,14 +118,6 @@ public class PlayerMovement : MonoBehaviour
                 moveDir = Vector2.zero;
             }
         }
-    }
-    #endregion
-
-    #region Methods
-    public void DisableForTime(float time)
-    {
-        noMoveTimer = Mathf.Max(time, noMoveTimer);
-        //moveDir = Vector2.zero;
     }
     #endregion
 
