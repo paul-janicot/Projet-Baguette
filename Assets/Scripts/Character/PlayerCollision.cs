@@ -6,8 +6,6 @@ public class PlayerCollision : MonoBehaviour
 {
     private void OnCollisionEnter(Collision collision)
     {
-        Debug.Log(collision.gameObject.tag);
-
         if (collision.gameObject.CompareTag("Item"))
         {
             Loot itemData = collision.gameObject.GetComponent<ItemDataHolder>().data;
