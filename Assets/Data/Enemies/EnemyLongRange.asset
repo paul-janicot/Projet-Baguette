@@ -16,4 +16,4 @@ MonoBehaviour:
   hp: 12
   speed: 1.5
   shootingRange: 20
-  shootingSpeed: 0.25
+  shootingSpeed: 0.5

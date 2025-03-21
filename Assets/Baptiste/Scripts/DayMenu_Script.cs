@@ -50,6 +50,7 @@ public class DayMenu_Script : MonoBehaviour
     }
     void Start()
     { 
+        
         dico = InventoryManager.instance.GetInventory() ;
 
         if (dico.ContainsKey("Farine"))
@@ -80,6 +81,8 @@ public class DayMenu_Script : MonoBehaviour
         {
             croissants = dico["Croissant"];
         }
+
+        score = InventoryManager.instance.score;
     }
 
     // Update is called once per frame
@@ -91,8 +94,8 @@ public class DayMenu_Script : MonoBehaviour
         textSucre.text = "" + sucre;
         textLait.text = "" + lait;
         textFruits.text = "" + fruits;
-        textCroissants.text = "Nombre de croissant: " + croissants;
-        textScore.text = "" + score;
+        textCroissants.text = "Croissants : " + croissants;
+        textScore.text = "Score : " + score;
 
     }
 

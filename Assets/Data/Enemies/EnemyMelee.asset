@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isDropping: 1
   hp: 4
-  speed: 6
+  speed: 10
   shootingRange: 0
   shootingSpeed: 0
