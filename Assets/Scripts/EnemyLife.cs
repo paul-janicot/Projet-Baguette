@@ -38,7 +38,7 @@ public class EnemyLife : MonoBehaviour
             {
                 if (enemyData.isDropping)
                 {
-                    // Drop item
+                    GetComponent<LootBag>().InstantiateLoot(transform.position);
                 }
 
                 Destroy(gameObject);

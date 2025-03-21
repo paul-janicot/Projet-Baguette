@@ -7,7 +7,7 @@ public class InventoryManager : MonoBehaviour
 {
     public static InventoryManager instance;
 
-    [SerializeField] private Dictionary<string, int> inventoryDict = new();
+    private Dictionary<string, int> inventoryDict = new();
 
     private void Awake()
     {

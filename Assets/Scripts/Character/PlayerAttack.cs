@@ -67,18 +67,21 @@ public class PlayerAttack : MonoBehaviour
     {
         if (context.performed)
         {
-            if (lastRangeAttackTimer <= 0 && !movement.isDashing)
+            if (lastRangeAttackTimer <= 0 && !movement.isDashing && InventoryManager.instance.GetInventory().ContainsKey("Croissant"))
             {
-                isRangeAttacking = true;
-                lastRangeAttackTimer = rangeAttackCooldown;
+                if (InventoryManager.instance.GetInventory()["Croissant"] > 0)
+                {
+                    InventoryManager.instance.RemoveItem("Croissant");
+                    isRangeAttacking = true;
+                    lastRangeAttackTimer = rangeAttackCooldown;
 
-                GameObject currentAttack = Instantiate(croissantPrefab, rangeSpawn.transform.position, Quaternion.identity);
-                currentAttack.transform.forward = direction.forward;
-                Destroy(currentAttack, croissantLifespan);
+                    GameObject currentAttack = Instantiate(croissantPrefab, rangeSpawn.transform.position, Quaternion.identity);
+                    currentAttack.transform.forward = direction.forward;
+                    Destroy(currentAttack, croissantLifespan);
+                }
             }
         }
     }
-
 
     public void NormalAttack(InputAction.CallbackContext context)
     {
