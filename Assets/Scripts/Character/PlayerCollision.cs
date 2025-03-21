@@ -1,5 +1,7 @@
 using UnityEngine;
 
+// Joa
+
 public class PlayerCollision : MonoBehaviour
 {
     private void OnCollisionEnter(Collision collision)
@@ -21,8 +23,6 @@ public class PlayerCollision : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log(other.tag);
-
         if (other.CompareTag("Enemy"))
         {
             PlayerLife.instance.TakeDamage(1);

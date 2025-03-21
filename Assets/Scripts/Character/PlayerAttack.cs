@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -30,6 +31,7 @@ public class PlayerAttack : MonoBehaviour
     [Header("Assign")]
     [SerializeField] private Transform direction;
     [SerializeField] private Transform rangeSpawn;
+    [SerializeField] private TextMeshProUGUI croissantNumber;
 
     private bool isNormalAttacking;
     private float lastNormalAttackTimer;
@@ -61,6 +63,19 @@ public class PlayerAttack : MonoBehaviour
         {
             isRangeAttacking = false;
         }
+    }
+
+    private void Update()
+    {
+        if (InventoryManager.instance.GetInventory().ContainsKey("Croissant"))
+        {
+            croissantNumber.text = InventoryManager.instance.GetInventory()["Croissant"].ToString();
+        } 
+        else
+        {
+            croissantNumber.text = "0";
+        }
+
     }
 
     public void RangeAttack(InputAction.CallbackContext context)
