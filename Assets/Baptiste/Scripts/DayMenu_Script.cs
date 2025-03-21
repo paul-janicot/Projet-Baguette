@@ -82,7 +82,7 @@ public class DayMenu_Script : MonoBehaviour
             croissants = dico["Croissant"];
         }
 
-        //score = InventoryManager.instance.score;
+       score = InventoryManager.score;
     }
 
     // Update is called once per frame
@@ -186,6 +186,8 @@ public class DayMenu_Script : MonoBehaviour
                 InventoryManager.instance.AddItem(croissantsData);
             }
         }
+
+        InventoryManager.score = score;
        SceneManager.LoadScene("Night");
     }
 

@@ -7,11 +7,13 @@ using UnityEngine.SceneManagement;
 
 public class UI_Script : MonoBehaviour
 {
-    [SerializeField] TextMeshProUGUI score;
+    [SerializeField] TextMeshProUGUI scoreText;
+    private int score;
     // Start is called before the first frame update
     void Start()
     {
-        //score = InventoryManager.instance.score;
+        score = InventoryManager.score;
+        scoreText.text = "Score :" + "\n"+ score;
     }
 
     public void MainMenu()
@@ -20,6 +22,6 @@ public class UI_Script : MonoBehaviour
     }
     public void Replay()
     {
-       // SceneManager.LoadScene("Night");
+       SceneManager.LoadScene("Night");
     }
 }
