@@ -97,26 +97,55 @@ public class DayMenu_Script : MonoBehaviour
     // Fonctions Boutons
     public void Baguette() 
     {
-        InstantiateRecette(baguetteObject);
+        if (farine >= 2)
+        {
+            InstantiateRecette(baguetteObject);
+            farine -= 2;
+        }
     }
     public void Brioche() 
     {
+        if(farine>= 2 && oeuf>= 2 && beurre>=1 && lait >= 1 && sucre >= 1)
+        {
         InstantiateRecette(briocheObject);
+        farine -= 2;
+        oeuf -= 2;
+        beurre --;
+        lait --;
+        sucre --;
+        }
+       
     }
     public void Muffin () 
     {
-        InstantiateRecette(muffinObject);
+        if (farine >= 1 && beurre >= 1 && sucre >= 1 && oeuf >= 1)
+        {
+            InstantiateRecette(muffinObject);
+            farine--;
+            beurre--;
+            sucre--;
+            oeuf--;
+        }
     }
     public void Gateau () 
     {
-        for (int i = 0; i < 1000; i++)
+       if(farine >= 1 &&  oeuf >= 2 && sucre >= 1 && fruits >= 1)
         {
             InstantiateRecette(gateauObject);
+            farine--;
+            oeuf -= 2;
+            sucre--;
+            fruits -= 1;
         }
     }
     public void Croissant()
     {
-        InstantiateRecette(croissantObject);
+        if (farine <= 1 && beurre <= 1)
+        {
+            InstantiateRecette(croissantObject);
+            farine --;
+            beurre --;
+        }
         
     }
 

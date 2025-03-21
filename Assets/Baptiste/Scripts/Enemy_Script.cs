@@ -4,13 +4,15 @@ using UnityEngine.AI;
 
 public class Enemy_Script : MonoBehaviour
 {
-    
+
 
     [SerializeField] private float patrolRange; //Distance the actor will travel in a straight line (random roam only)
     [SerializeField] private float sightRange; //Distance at which the actor will detect the player
     [SerializeField] private float fieldOfView; //the angle at which the enemy sees
     [SerializeField] private float shootingRange; //At what distance does the enemy shoots ya
     [SerializeField] private float shootingSpeed; //How fast do they shoot
+    [SerializeField] private EnemyData enemyData;
+    
 
     private NavMeshAgent agent; 
     private Transform _transform;
@@ -34,6 +36,7 @@ public class Enemy_Script : MonoBehaviour
         _transform = GetComponent<Transform>();
         _player = PlayerMovement.instance.gameObject;
         _spawn = transform.GetChild(0);
+        
 
     }
 
